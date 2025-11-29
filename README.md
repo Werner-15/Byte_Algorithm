@@ -2,8 +2,7 @@
 This module provides quick and basic byte algorithm for you to improve your developing efficiency.
 
 ## 简介
-介绍这个项目的定位和用途，例如：
-> 一个用 C 语言实现的基础字节与位操作算法库，支持对 8 位字节的单独或批量位操作，包含获取、设置、翻转等常用方法，适用于嵌入式开发、底层协议解析、数据处理等场景。
+> 这是一个用 C 语言实现的基础字节与位操作算法库，支持对 8 位字节的单独或批量位操作，包含获取、设置、翻转等常用方法，适用于嵌入式开发、底层协议解析、数据处理等场景。
 
 ## 功能特性
 - 获取/设置/翻转/复位 LSB（最低位）与 MSB（最高位）
@@ -42,14 +41,13 @@ if (Byte_Algorithm_check_Error()) {
 ```
 
 ## 主要 API 说明
-简要罗列每个函数功能：
 - `getLSB(uint8_t byte)`: 获取最低位
 - `setLSB(uint8_t byte)`: 设最低位为1
 - `getMSB(uint8_t byte)`: 获取最高位
 - `setMSB(uint8_t byte)`: 设最高位为1
 - `getBitN(uint8_t byte, uint8_t n)`: 获取指定位
-
-可继续补充其它重要函数说明。
+- `writeBits(uint8_t byte,uint8_t start_bit,uint8_t length,uint8_t value);`: 对一个字节连续的某几位写入而不改变其它位
+- `uint8_t getBits(uint8_t byte,uint8_t start_bit,uint8_t length);`:获取一个字节的连续几位
 
 ## 致谢和许可
 > 本项目由 Werner-15 开发与维护。如有建议或贡献欢迎 Issue 和 PR。
